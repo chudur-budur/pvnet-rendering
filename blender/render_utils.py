@@ -256,8 +256,12 @@ class Renderer(object):
                   format(self.blender_path, self.blank_blend, self.py_path, self.obj_path,
                          self.output_dir_path, self.bg_imgs_path, self.poses_path))
         depth_paths = glob.glob(os.path.join(self.output_dir_path, '*.exr'))
+        count = 0 
         for depth_path in depth_paths:
             self.exr_to_png(depth_path)
+            count = count + 1
+            if count > 10:
+                break
 
     @staticmethod
     def multi_thread_render():
