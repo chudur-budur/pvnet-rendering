@@ -38,7 +38,8 @@ cfg.SUN = os.path.join(cfg.DATA_DIR, "SUN")
 """
 Rendering setting
 """
-cfg.BLENDER_PATH = '/home/pengsida/Software/blender-2.79a-linux-glibc219-x86_64/blender'
+# cfg.BLENDER_PATH = '/home/pengsida/Software/blender-2.79a-linux-glibc219-x86_64/blender'
+cfg.BLENDER_PATH = os.environ['HOME'] + '/opt/blender-2.79a-linux-glibc219-x86_64/blender'
 cfg.NUM_SYN = 10
 cfg.WIDTH = 640
 cfg.HEIGHT = 480
