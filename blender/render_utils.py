@@ -261,8 +261,8 @@ class Renderer(object):
         fp = open("render_utils.log", 'w')
         fp.write("Saving exr to png, lol\n")
         for depth_path in depth_paths:
-            self.exr_to_png(depth_path)
             fp.write("here, lol\n")
+            self.exr_to_png(depth_path)
             count = count + 1
             if count > 10:
                 break
