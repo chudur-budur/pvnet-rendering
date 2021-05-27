@@ -265,7 +265,6 @@ class Renderer(object):
         else:
             fp.write("It's over buddy boyo, JFL\n")
         for depth_path in depth_paths:
-            fp.write("here, lol\n")
             self.exr_to_png(depth_path)
             count = count + 1
             if count > 10:
