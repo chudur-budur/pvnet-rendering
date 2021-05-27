@@ -134,9 +134,9 @@ class ModelAligner(object):
 
     def validate(self, idx):
         model = self.load_ply_model(self.blender_model_path)
-        pose = read_pickle('/home/pengsida/Datasets/LINEMOD/renders/{}/{}_RT.pkl'.format(self.class_type, idx))['RT']
+        pose = read_pickle('data/LINEMOD/renders/{}/{}_RT.pkl'.format(self.class_type, idx))['RT']
         model_2d = self.project_model(model, pose, 'blender')
-        img = np.array(Image.open('/home/pengsida/Datasets/LINEMOD/renders/{}/{}.jpg'.format(self.class_type, idx)))
+        img = np.array(Image.open('data/LINEMOD/renders/{}/{}.jpg'.format(self.class_type, idx)))
 
         import matplotlib.pyplot as plt
         plt.imshow(img)

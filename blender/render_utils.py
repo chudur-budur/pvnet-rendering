@@ -317,7 +317,7 @@ class MultiRenderer(Renderer):
     def __init__(self):
         super(MultiRenderer, self).__init__('')
         self.poses_path = os.path.join(cfg.DATA_DIR, '{}_poses.npy')
-        self.output_dir_path = '/home/pengsida/Datasets/LINEMOD/renders/all_objects'
+        self.output_dir_path = 'data/LINEMOD/renders/all_objects'
 
     def sample_poses(self):
         for class_type in self.class_types:

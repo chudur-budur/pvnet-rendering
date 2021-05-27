@@ -290,7 +290,7 @@ def add_shader_on_obj_object(obj):
 
     material.node_tree.links.new(diffuse_node.outputs['BSDF'], mat_out.inputs['Surface'])
     material.node_tree.links.new(image_node.outputs['Color'], diffuse_node.inputs['Color'])
-    img_path = '/home/pengsida/Datasets/YCB/models/002_master_chef_can/texture_map.png'
+    img_path = 'data/YCB/models/002_master_chef_can/texture_map.png'
     img_name = os.path.basename(img_path)
     bpy.data.images.load(img_path)
     image_node.image = bpy.data.images[img_name]
@@ -315,7 +315,7 @@ def add_shader_on_plane(plane):
     material.node_tree.links.new(image_node.outputs['Color'], diffuse_node.inputs['Color'])
     material.node_tree.links.new(diffuse_node.outputs['BSDF'], mat_out.inputs['Surface'])
 
-    img_path = '/home/pengsida/Pictures/board.png'
+    img_path = 'data/Pictures/board.png'
     img_name = os.path.basename(img_path)
     bpy.data.images.load(img_path)
     image_node.image = bpy.data.images[img_name]
