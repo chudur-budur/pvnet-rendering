@@ -259,9 +259,10 @@ class Renderer(object):
         depth_paths = glob.glob(os.path.join(self.output_dir_path, '*.exr'))
         count = 0 
         fp = open("render_utils.log", 'w')
+        fp.write("Saving exr to png, lol\n")
         for depth_path in depth_paths:
-            fp.write("Saving exr to png, lol\n")
             self.exr_to_png(depth_path)
+            fp.write("here, lol\n")
             count = count + 1
             if count > 10:
                 break
