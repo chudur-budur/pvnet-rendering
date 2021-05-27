@@ -193,7 +193,7 @@ class Renderer(object):
 
         for img_path in img_paths:
             img = Image.open(img_path)
-            row, col = img.size
+            # row, col = img.size
             # if row > 500 and col > 500:
             bg_imgs.append(img_path)
 
@@ -213,7 +213,7 @@ class Renderer(object):
 
         def read_exr(s, width, height):
             mat = np.fromstring(s, dtype=np.float32)
-            mat = mat.reshape(2 * height, 2 * width)
+            mat = mat.reshape(height, width)
             return mat
 
         dmap, _, _ = [read_exr(s, width, height) for s in exr_image.channels('BGR', Imath.PixelType(Imath.PixelType.FLOAT))]
