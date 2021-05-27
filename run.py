@@ -9,9 +9,9 @@ args = parser.parse_args()
 
 def run_rendering():
     from blender.render_utils import Renderer, YCBRenderer
-    YCBRenderer.multi_thread_render()
-    renderer = YCBRenderer('037_scissors')
-    # renderer=Renderer('eggbox')
+    # YCBRenderer.multi_thread_render()
+    # renderer = YCBRenderer('037_scissors')
+    renderer = Renderer('eggbox')
     renderer.run()
 
 

@@ -34,6 +34,7 @@ cfg.LINEMOD_ORIG = os.path.join(cfg.DATA_DIR, 'LINEMOD_ORIG')
 cfg.OCCLUSION_LINEMOD = os.path.join(cfg.DATA_DIR, 'OCCLUSION_LINEMOD')
 cfg.YCB = os.path.join(cfg.DATA_DIR, 'YCB')
 cfg.SUN = os.path.join(cfg.DATA_DIR, "SUN")
+cfg.JELLYFISH = os.path.join(cfg.DATA_DOR, "JELLYFISH")
 
 """
 Rendering setting

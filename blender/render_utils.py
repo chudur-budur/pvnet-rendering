@@ -187,13 +187,14 @@ class Renderer(object):
         if os.path.exists(self.bg_imgs_path):
             return
 
-        img_paths = glob.glob(os.path.join(cfg.SUN, 'JPEGImages/*'))
+        # img_paths = glob.glob(os.path.join(cfg.SUN, 'JPEGImages/*'))
+        img_paths = glob.glob(os.path.join(cfg.JELLYFISH, '*'))
         bg_imgs = []
 
         for img_path in img_paths:
             img = Image.open(img_path)
             row, col = img.size
-            if row > 500 and col > 500:
+            if row > 500 and col > 500:`
                 bg_imgs.append(img_path)
 
         np.save(self.bg_imgs_path, bg_imgs)
