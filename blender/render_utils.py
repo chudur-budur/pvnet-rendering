@@ -260,7 +260,7 @@ class Renderer(object):
         count = 0 
         fp = open("render_utils.log", 'w')
         fp.write("Saving exr to png, lol\n")
-        fp.write("lmfao: " + str(depth_paths))
+        fp.write("lmfao: " + str(depth_paths) + '\n')
         for depth_path in depth_paths:
             fp.write("here, lol\n")
             self.exr_to_png(depth_path)
