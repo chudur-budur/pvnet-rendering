@@ -11,7 +11,7 @@ def run_rendering():
     from blender.render_utils import Renderer, YCBRenderer
     # YCBRenderer.multi_thread_render()
     # renderer = YCBRenderer('037_scissors')
-    renderer=Renderer('cat')
+    renderer=Renderer('eggbox')
     renderer.run()
 
 
