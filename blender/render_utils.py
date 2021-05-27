@@ -258,6 +258,7 @@ class Renderer(object):
         depth_paths = glob.glob(os.path.join(self.output_dir_path, '*.exr'))
         count = 0 
         for depth_path in depth_paths:
+            print("Saving exr to png at {0:s}".format(depth_path))
             self.exr_to_png(depth_path)
             count = count + 1
             if count > 10:
