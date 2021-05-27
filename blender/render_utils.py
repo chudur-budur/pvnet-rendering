@@ -268,7 +268,7 @@ class Renderer(object):
         for depth_path in depth_paths:
             self.exr_to_png(depth_path)
             count = count + 1
-            if count > 10:
+            if count > 50:
                 break
         fp.close()
 
