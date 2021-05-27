@@ -213,7 +213,7 @@ class Renderer(object):
 
         def read_exr(s, width, height):
             mat = np.fromstring(s, dtype=np.float32)
-            mat = mat.reshape(height, width)
+            mat = mat.reshape(2 * height, 2 * width)
             return mat
 
         dmap, _, _ = [read_exr(s, width, height) for s in exr_image.channels('BGR', Imath.PixelType(Imath.PixelType.FLOAT))]
