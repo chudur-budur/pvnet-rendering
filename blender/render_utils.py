@@ -194,8 +194,8 @@ class Renderer(object):
         for img_path in img_paths:
             img = Image.open(img_path)
             row, col = img.size
-            if row > 500 and col > 500:
-                bg_imgs.append(img_path)
+            # if row > 500 and col > 500:
+            bg_imgs.append(img_path)
 
         np.save(self.bg_imgs_path, bg_imgs)
 
