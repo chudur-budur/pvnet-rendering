@@ -258,7 +258,7 @@ class Renderer(object):
                          self.output_dir_path, self.bg_imgs_path, self.poses_path))
         depth_paths = glob.glob(os.path.join(self.output_dir_path, '*.exr'))
         count = 0 
-        fp = open("log.log", 'r')
+        fp = open("render_utils.log", 'w')
         for depth_path in depth_paths:
             fp.write("Saving exr to png, lol\n")
             self.exr_to_png(depth_path)
